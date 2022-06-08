@@ -10,7 +10,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './home/home.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CheckinComponent } from './checkin/checkin.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -18,7 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NavBarComponent
+    CheckinComponent
   ],
   imports: [
     BrowserModule,
