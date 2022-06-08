@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { AngularFireAuth } from "@angular/fire/compat/auth";
 
 @Component({
@@ -10,9 +10,9 @@ import { AngularFireAuth } from "@angular/fire/compat/auth";
 })
 export class LoginComponent implements OnInit {
 
-  loginForm = new FormGroup({
-    userName: new FormControl('', Validators.compose([Validators.required])),
-    password: new FormControl('', Validators.compose([Validators.required]))
+  loginForm = new UntypedFormGroup({
+    userName: new UntypedFormControl('', Validators.compose([Validators.required])),
+    password: new UntypedFormControl('', Validators.compose([Validators.required]))
   });
 
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  doLogin(formData: FormGroup) {
+  doLogin(formData: UntypedFormGroup) {
     if (formData.valid) {
       this.afAuth.signInWithEmailAndPassword(formData.value.userName, formData.value.password)
         .then(loginResponse => {
