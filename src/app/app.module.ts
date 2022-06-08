@@ -10,12 +10,14 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { environment } from 'src/environments/environment';
 import { HomeComponent } from './home/home.component';
+import { CheckinComponent } from './checkin/checkin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    CheckinComponent
   ],
   imports: [
     BrowserModule,
